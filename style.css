@@ -76,59 +76,42 @@ min-height: 75px;
 
 }
 .f-azul {
-    color: red;
+    color: rgb(231, 8, 8);
    
 }
 .sobre-mim strong{
-    color: red;
+    color: rgb(255, 68, 0);
+}
+.sobre-mim span{
+    color: blue;
 }
 @media(max-width:425px){ 
     .sobre-mim{
-        grid-template-columns: 1fr ;
-    }
+        padding-left:35px;
+        padding-right: 35px;
+        text-align:center;
+ }
+  
     .sobre-mim h1{
-        font-size: 1.5em;
-        
-
-    }.sobre-mim .coluna h2{
-        font-size: 15px;
+        font-size: 1.7em;
+        text-align:justify;
+    }
+    .sobre-mim .coluna h2{
+        font-size: 1.9rem;
     }
     .sobre-mim .coluna p{
         font-size: 10px;
         text-transform:uppercase;
     }
-   
-    .sobre-mim .foto{
-        width: 10px;
-    }
-
-    .sobre-mim img{
-      width: 50px;
+    .sobre-mim .instagram-linkedin-github img{
+        padding-right: 40px;
     }
     
-}
+ }
 
-.sobre-mim img {
-    width: 150px;
-    }
 @keyframes float{
     0%, 100%{transform: translateY(0);}
     50%{transform: translateY(4rem);}
-}
-.sobre-mim .animacao img{
-    padding-left: 80px;
-}
-.sobre-mim .instagram-linkedin button{
-    font-size: 30px;
-    padding: 10px;
-    margin-top: 30px;
-    background-color: red;
-    color: rgb(165, 165, 165);
-    border-radius: 3px;
-    border: none;
-    transition: 0.4s;
-    cursor: pointer;
-    
 }
 .sobre-mim p{
     color: rgb(173, 177, 181);
@@ -136,9 +119,13 @@ min-height: 75px;
     ;
     
 }
-.sobre-mim .instagram-linkedin button:hover{
-    padding-left:  30px;
+.sobre-mim .instagram-linkedin-github img{
+    position: relative;
+    margin-top: 20px;
+    margin-left: 50px;
+   
 }
+
 
 .imagem-texto h2{
     color: rgb(173, 177, 181);
@@ -148,7 +135,7 @@ min-height: 75px;
 .sobre-mim .seta::after{
     content: url('./imagens/setavermelha.png');
      position: absolute;
-     height: 335px;
+     height: 340px;
      bottom:40px;
      left: 400px;
      animation: opacity 2.5s infinite alternate ease-in-out;
@@ -163,26 +150,24 @@ min-height: 75px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2;
-    background-color: rgb(30, 30, 30);
+    background-color: rgb(0, 0, 0); 
     max-width: var(--max-width-size);
-    height: 100rem;
-    margin: 0 auto;
+    height: 800px;
 }
-.item h3{
+.about .item h3{
     color: rgb(205, 9, 9);
     font-weight:700;
     font-size: 4rem;
 }
-.item{
+.about .item{ 
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content:center ;
     align-content: center;
-    background-color: rgb(9, 9, 9);
 
 }
-.item p{
+.about .item p{
     color: rgb(103, 110, 110);
     padding: 20px;
     font-size: 1.8rem;
@@ -190,7 +175,7 @@ min-height: 75px;
     
     
 }
-.item .btn-know-more{
+.about .btn-know-more{
     color: rgb(103, 110, 110);
      width: 90px;
      text-align: center;
@@ -198,59 +183,71 @@ min-height: 75px;
      transition: 0.4s;
      
 }
-.item .btn-know-more:hover{
+.about  .btn-know-more:hover{
     background-color: red;
     color: black;
 
 }
-.image{
-    height: 100%;
-    width: 100%;
-}
 
-.image.right{
+.about .image .left{
     background-size: cover;
-    border-radius: 5px;
-    margin-top: 50px;
-    width: 450px;
-
-}
-
- 
-/*about*/.iconcss{
-      width: 10%;
-      animation: float 7s infinite ease-in-out;
-
-}
-/*about*/ .iconhtml{
-     animation: float 7s infinite ease-in-out;
-
-}
-.about .iconjavascript{
-    padding-bottom: 40px;
-    animation: float 7s infinite ease-in-out;
-}
-
-
-.image.left{
+   }
+.about .imageritgh{
     background-size: cover;
-    background-color: rgb(9, 9, 9);
-
+    
 }
-@media(max-width:768px){
+.about h3{
+    color: rgb(205, 9, 9);
+    font-weight:700;
+    font-size: 4rem;    
+}
+.about .texto-titulo{
+    margin: 20px;
+    margin-top: 30px;
+}
+
+.about .texto-titulo p{
+    color: rgb(103, 110, 110);
+    padding: 20px;
+    font-size: 1.8rem;
+    margin: 30px 0;
+}
+.about .texto-titulo .btn-know-more a{
+    color: rgb(103, 110, 110);
+     width: 90px;
+     text-align: center;
+     border-radius: 5px;
+     transition: 0.4s;
+     
+}
+
+ /*media--.about*/ @media(max-width:768px){
+    .about{
+        height: 110rem;
+    }
+    
     .about .item h3{
         text-align: center;
     }
-    .about .item a{
+    .about .item p{
+        text-align: center;
+    }
+
+    .about a{
         align-self: center;
+        text-align: center;
+    }
+    .about .texto-titulo {
+        text-align: center;
     }
 }  
 @media(max-width:425px){
     .about{
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
-}  
+}/*media--.about*/  
+/**borda-projetos*/
 
 /*projeto*/
 .projeto{
@@ -281,24 +278,53 @@ min-height: 75px;
     line-height: 25px;
 }
 .projeto .service1:nth-child(1){
-    background-color: darkslateblue;
+    background-color: rgb(30,30,30);
     padding: 70px 20px;
-
+    color: rgb(103, 110, 110);
 
 }
 .projeto .service2:nth-child(2){
-    background-color: turquoise;
+    background-color: rgb(43, 42, 42);
     padding: 70px 20px;
-
+    color: rgb(103, 110, 110);
 }
 @media(max-width:450px){
     .projeto{
         grid-template-columns: 1fr;
     }
 }
+/*borda-habilidades*/
+.borda-habilidades{
+    background-color: rgb(30,30,30);
+    height: 250px;
+    width: 400%;
+    display: flex;
+    flex-direction: column;
+
+}
+.borda-habilidades p{
+    color: rgb(103, 110, 110);
+    text-align: center;
+    margin-top: 50px;
+}
+.logo-habilidades{
+    text-align: center;
+    animation: float 5.7s infinite alternate ease-in-out;
+}
+ 
+.habilidades{
+    color: rgb(103, 110, 110);
+    text-align: center;
+    margin: 25px;
+}
 
 /*footer*/
 .footer{
     grid-area: footer;
-    background-color:rgb(255, 0, 0);
+    background-color:rgb(0, 0, 0);
+
+
+}
+@media(max-width:425){
+     
 }
